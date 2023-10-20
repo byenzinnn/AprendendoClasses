@@ -20,9 +20,47 @@ namespace AprendendoClasses
         //Criando objeto carro
         Carro objCarro = new Carro(); // Chamada
 
+        int op;
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnClasseCarro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(op == 1){ 
+                    
+                    // Atribui valor aos atributos com os set's
+                    objCarro.setPlaca(txtPlaca.Text);
+                    objCarro.setCor(cmbCorCarro.Text);
+                    objCarro.setCombustivel(txtCombustivel.Text);
+                    objCarro.setDataCompra(dtpDataCompra.Value);
+                    objCarro.setMarca(txtMarca.Text);
+                    objCarro.setPreco(Convert.ToDouble(txtPreco.Text));
+                    objCarro.setNumBatidas(Convert.ToInt16(txtNumBatidas.Text));
+
+                    // Acessando os metodos get
+                    lblClasse.Text = ("Placa: " + objCarro.getPlaca());
+                    lblClasse.Text += ("\nModelo: " + objCarro.getMarca());
+                    lblClasse.Text += ("\nCor: " + objCarro.getCor());
+                    lblClasse.Text += ("\nPreço: " + objCarro.getPreco());
+
+                    op = 0;
+                }
+                else if (op == 0)
+                {
+                    lblClasse.Text = "";
+
+                    op = 1;
+                }
+            }
+
+            catch (FormatException){
+                MessageBox.Show("Erro de inclusão");
+            }
         }
     }
 }
