@@ -62,5 +62,17 @@ namespace AprendendoClasses
                 MessageBox.Show("Erro de inclusão");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 um = new Form1();
+            this.Hide();
+            um.Show();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

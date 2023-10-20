@@ -23,5 +23,19 @@ namespace AprendendoClasses
             this.Hide();
             dois.Show();
         }
+
+        private void btnCadastrarCachorros_Click(object sender, EventArgs e)
+        {
+            Form3 tres = new Form3();
+            this.Hide();
+            tres.Show();
+        }
+
+        private void btnCadastrarAluno_Click(object sender, EventArgs e)
+        {
+            Form4 quatro = new Form4();
+            this.Hide();
+            quatro.Show();
+        }
     }
 }

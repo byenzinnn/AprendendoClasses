@@ -49,6 +49,7 @@
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.cmbCorCarro = new System.Windows.Forms.ComboBox();
             this.dtpDataCompra = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -248,12 +249,25 @@
             this.dtpDataCompra.Size = new System.Drawing.Size(200, 23);
             this.dtpDataCompra.TabIndex = 27;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(552, 384);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 54);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "VOLTAR";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpDataCompra);
             this.Controls.Add(this.cmbCorCarro);
             this.Controls.Add(this.txtPreco);
@@ -276,7 +290,8 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrarCarro);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Carros";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +320,6 @@
         private TextBox txtPreco;
         private ComboBox cmbCorCarro;
         private DateTimePicker dtpDataCompra;
+        private Button button1;
     }
 }
