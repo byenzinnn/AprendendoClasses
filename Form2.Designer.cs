@@ -50,6 +50,7 @@
             this.cmbCorCarro = new System.Windows.Forms.ComboBox();
             this.dtpDataCompra = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAumValCarro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -169,7 +170,7 @@
             // lblClasse
             // 
             this.lblClasse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblClasse.Location = new System.Drawing.Point(528, 205);
+            this.lblClasse.Location = new System.Drawing.Point(529, 205);
             this.lblClasse.Name = "lblClasse";
             this.lblClasse.Size = new System.Drawing.Size(202, 176);
             this.lblClasse.TabIndex = 16;
@@ -261,12 +262,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnAumValCarro
+            // 
+            this.btnAumValCarro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAumValCarro.Location = new System.Drawing.Point(12, 320);
+            this.btnAumValCarro.Name = "btnAumValCarro";
+            this.btnAumValCarro.Size = new System.Drawing.Size(338, 61);
+            this.btnAumValCarro.TabIndex = 29;
+            this.btnAumValCarro.Text = "Aumentar valor em 100";
+            this.btnAumValCarro.UseVisualStyleBackColor = false;
+            this.btnAumValCarro.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAumValCarro);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpDataCompra);
             this.Controls.Add(this.cmbCorCarro);
@@ -321,5 +334,6 @@
         private ComboBox cmbCorCarro;
         private DateTimePicker dtpDataCompra;
         private Button button1;
+        private Button btnAumValCarro;
     }
 }

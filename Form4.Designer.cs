@@ -40,12 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpDataCompra = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
             this.lblClasse = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMensalidade = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -87,14 +89,14 @@
             // 
             // txtNota2
             // 
-            this.txtNota2.Location = new System.Drawing.Point(95, 159);
+            this.txtNota2.Location = new System.Drawing.Point(93, 192);
             this.txtNota2.Name = "txtNota2";
             this.txtNota2.Size = new System.Drawing.Size(146, 23);
             this.txtNota2.TabIndex = 42;
             // 
             // txtNota1
             // 
-            this.txtNota1.Location = new System.Drawing.Point(81, 121);
+            this.txtNota1.Location = new System.Drawing.Point(79, 154);
             this.txtNota1.Name = "txtNota1";
             this.txtNota1.Size = new System.Drawing.Size(146, 23);
             this.txtNota1.TabIndex = 41;
@@ -118,7 +120,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(10, 154);
+            this.label6.Location = new System.Drawing.Point(8, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 28);
             this.label6.TabIndex = 36;
@@ -128,7 +130,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(10, 116);
+            this.label5.Location = new System.Drawing.Point(8, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 28);
             this.label5.TabIndex = 35;
@@ -165,24 +167,6 @@
             this.label1.Text = "Nome:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dtpDataCompra
-            // 
-            this.dtpDataCompra.Location = new System.Drawing.Point(148, 193);
-            this.dtpDataCompra.Name = "dtpDataCompra";
-            this.dtpDataCompra.Size = new System.Drawing.Size(200, 23);
-            this.dtpDataCompra.TabIndex = 46;
-            this.dtpDataCompra.ValueChanged += new System.EventHandler(this.dtpDataCompra_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(10, 188);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 28);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Data Compra:";
-            // 
             // lblClasse
             // 
             this.lblClasse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -211,6 +195,7 @@
             this.btnCadastrarAluno.TabIndex = 47;
             this.btnCadastrarAluno.Text = "Cadastrar Aluno";
             this.btnCadastrarAluno.UseVisualStyleBackColor = false;
+            this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
             // 
             // label11
             // 
@@ -222,17 +207,54 @@
             this.label11.TabIndex = 50;
             this.label11.Text = "CLASSE ALUNO";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(203, 120);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 52;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(8, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 28);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Data de nascimento:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtMensalidade
+            // 
+            this.txtMensalidade.Location = new System.Drawing.Point(141, 226);
+            this.txtMensalidade.Name = "txtMensalidade";
+            this.txtMensalidade.Size = new System.Drawing.Size(146, 23);
+            this.txtMensalidade.TabIndex = 54;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(8, 221);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(127, 28);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Mensalidade:";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtMensalidade);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lblClasse);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnCadastrarAluno);
-            this.Controls.Add(this.dtpDataCompra);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbDataNascimento);
             this.Controls.Add(this.txtNota2);
             this.Controls.Add(this.txtNota1);
@@ -266,11 +288,13 @@
         private Label label4;
         private Label label3;
         private Label label1;
-        private DateTimePicker dtpDataCompra;
-        private Label label8;
         private Label lblClasse;
         private Label label9;
         private Button btnCadastrarAluno;
         private Label label11;
+        private DateTimePicker dateTimePicker1;
+        private Label label2;
+        private TextBox txtMensalidade;
+        private Label label7;
     }
 }

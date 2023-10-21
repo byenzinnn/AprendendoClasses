@@ -31,32 +31,26 @@ namespace AprendendoClasses
         {
             try
             {
-                if(op == 1){ 
-                    
-                    // Atribui valor aos atributos com os set's
-                    objCarro.setPlaca(txtPlaca.Text);
-                    objCarro.setCor(cmbCorCarro.Text);
-                    objCarro.setCombustivel(txtCombustivel.Text);
-                    objCarro.setDataCompra(dtpDataCompra.Value);
-                    objCarro.setMarca(txtMarca.Text);
-                    objCarro.setPreco(Convert.ToDouble(txtPreco.Text));
-                    objCarro.setNumBatidas(Convert.ToInt16(txtNumBatidas.Text));
+                // Atribui valor aos atributos com os set's
+                objCarro.setPlaca(txtPlaca.Text);
+                objCarro.setCor(cmbCorCarro.Text);
+                objCarro.setCombustivel(txtCombustivel.Text);
+                objCarro.setDataCompra(dtpDataCompra.Value);
+                objCarro.setMarca(txtMarca.Text);
+                objCarro.setPreco(Convert.ToDouble(txtPreco.Text));
+                objCarro.setNumBatidas(Convert.ToInt16(txtNumBatidas.Text));
 
-                    // Acessando os metodos get
-                    lblClasse.Text = ("Placa: " + objCarro.getPlaca());
-                    lblClasse.Text += ("\nModelo: " + objCarro.getMarca());
-                    lblClasse.Text += ("\nCor: " + objCarro.getCor());
-                    lblClasse.Text += ("\nPreço: " + objCarro.getPreco());
+                // Acessando os metodos get
+                lblClasse.Text = ("Placa: " + objCarro.getPlaca());
+                lblClasse.Text += ("\nModelo: " + objCarro.getMarca());
+                lblClasse.Text += ("\nCor: " + objCarro.getCor());
+                lblClasse.Text += ("\nPreço: " + objCarro.getPreco());
+                lblClasse.Text += ("\nData Compra : " + objCarro.getDataCompra());
+                lblClasse.Text += ("\nNum batidas : " + objCarro.getNumBatidas());
+                lblClasse.Text += ("\nMarca : " + objCarro.getMarca());
+                
 
-                    op = 0;
                 }
-                else if (op == 0)
-                {
-                    lblClasse.Text = "";
-
-                    op = 1;
-                }
-            }
 
             catch (FormatException){
                 MessageBox.Show("Erro de inclusão");
@@ -73,6 +67,12 @@ namespace AprendendoClasses
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int val = Convert.ToInt32(txtPreco.Text);
+            val = val + 100;
         }
     }
 }

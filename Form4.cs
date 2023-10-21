@@ -17,6 +17,8 @@ namespace AprendendoClasses
             InitializeComponent();
         }
 
+        Aluno aluno = new Aluno();
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 um = new Form1();
@@ -42,6 +44,23 @@ namespace AprendendoClasses
         private void dtpDataCompra_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastrarAluno_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                aluno.setNome(txtNome.Text);
+
+            } catch(FormatException)
+            {
+                MessageBox.Show("Erro de inclusão");
+            }
         }
     }
 }
