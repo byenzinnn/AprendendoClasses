@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.cmbDataNascimento = new System.Windows.Forms.ComboBox();
+            this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.txtNota2 = new System.Windows.Forms.TextBox();
             this.txtNota1 = new System.Windows.Forms.TextBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
@@ -44,10 +44,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtmDtNasc = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMensalidade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblMedia = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -74,18 +76,18 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // cmbDataNascimento
+            // cmbCurso
             // 
-            this.cmbDataNascimento.FormattingEnabled = true;
-            this.cmbDataNascimento.Items.AddRange(new object[] {
+            this.cmbCurso.FormattingEnabled = true;
+            this.cmbCurso.Items.AddRange(new object[] {
             "Portugues",
             "Matematica",
             "Fisica",
             "Geografia"});
-            this.cmbDataNascimento.Location = new System.Drawing.Point(79, 86);
-            this.cmbDataNascimento.Name = "cmbDataNascimento";
-            this.cmbDataNascimento.Size = new System.Drawing.Size(121, 23);
-            this.cmbDataNascimento.TabIndex = 44;
+            this.cmbCurso.Location = new System.Drawing.Point(79, 86);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(121, 23);
+            this.cmbCurso.TabIndex = 44;
             // 
             // txtNota2
             // 
@@ -207,12 +209,12 @@
             this.label11.TabIndex = 50;
             this.label11.Text = "CLASSE ALUNO";
             // 
-            // dateTimePicker1
+            // dtmDtNasc
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(203, 120);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 52;
+            this.dtmDtNasc.Location = new System.Drawing.Point(203, 120);
+            this.dtmDtNasc.Name = "dtmDtNasc";
+            this.dtmDtNasc.Size = new System.Drawing.Size(200, 23);
+            this.dtmDtNasc.TabIndex = 52;
             // 
             // label2
             // 
@@ -242,20 +244,42 @@
             this.label7.TabIndex = 53;
             this.label7.Text = "Mensalidade:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(8, 254);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 28);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Media:";
+            // 
+            // lblMedia
+            // 
+            this.lblMedia.AutoSize = true;
+            this.lblMedia.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMedia.Location = new System.Drawing.Point(77, 254);
+            this.lblMedia.Name = "lblMedia";
+            this.lblMedia.Size = new System.Drawing.Size(28, 28);
+            this.lblMedia.TabIndex = 56;
+            this.lblMedia.Text = "....";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMedia);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtMensalidade);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtmDtNasc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lblClasse);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnCadastrarAluno);
-            this.Controls.Add(this.cmbDataNascimento);
+            this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.txtNota2);
             this.Controls.Add(this.txtNota1);
             this.Controls.Add(this.txtSexo);
@@ -269,6 +293,7 @@
             this.Controls.Add(this.btnSair);
             this.Name = "Form4";
             this.Text = "Alunos";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,7 +303,7 @@
 
         private Button button1;
         private Button btnSair;
-        private ComboBox cmbDataNascimento;
+        private ComboBox cmbCurso;
         private TextBox txtNota2;
         private TextBox txtNota1;
         private TextBox txtSexo;
@@ -292,9 +317,11 @@
         private Label label9;
         private Button btnCadastrarAluno;
         private Label label11;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtmDtNasc;
         private Label label2;
         private TextBox txtMensalidade;
         private Label label7;
+        private Label label8;
+        private Label lblMedia;
     }
 }
