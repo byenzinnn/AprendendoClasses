@@ -73,7 +73,10 @@ namespace AprendendoClasses
             {
                 cmbEstado.Visible = true;
                 lblEstado.Visible = true;
+                cmbCidade.Visible = false;
+                lblCidade.Visible = false;
                 cmbEstado.Text = "";
+                cmbCidade.Text = "";
 
                 cmbEstado.Items.Clear();
                 cmbEstado.Items.Add("São Paulo");
@@ -83,7 +86,11 @@ namespace AprendendoClasses
             {
                 cmbEstado.Visible = true;
                 lblEstado.Visible = true;
+                cmbCidade.Visible = false;
+                lblCidade.Visible = false;
+                
                 cmbEstado.Text = "";
+                cmbCidade.Text = "";
 
                 cmbEstado.Items.Clear();
                 cmbEstado.Items.Add("New York");
@@ -94,14 +101,56 @@ namespace AprendendoClasses
 
         private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbEstado.SelectedIndex == 0 && cmbPais.SelectedIndex == 0)
+            if(cmbPais.SelectedIndex == 0 && cmbEstado.SelectedIndex == 0)
             {
                 cmbCidade.Visible = true;
                 lblCidade.Visible = true;
+                
+                cmbEstado.Text = "";
+                cmbCidade.Text = "";
 
                 cmbCidade.Items.Clear();
+                cmbCidade.Items.Add("Capital");
+                cmbCidade.Items.Add("Iracemapolis");
+
             }
-            
+            else if(cmbPais.SelectedIndex == 0 && cmbEstado.SelectedIndex == 1)
+            {
+                cmbCidade.Visible = true;
+                lblCidade.Visible = true;
+                
+                cmbEstado.Text = "";
+                cmbCidade.Text = "";
+
+                cmbCidade.Items.Clear();
+                cmbCidade.Items.Add("Joinville");
+                cmbCidade.Items.Add("Blumenau");
+            }
+            else if(cmbPais.SelectedIndex == 1 && cmbEstado.SelectedIndex == 0)
+            {
+                cmbCidade.Visible = true;
+                lblCidade.Visible = true;
+                
+                cmbEstado.Text = "";
+                cmbCidade.Text = "";
+
+                cmbCidade.Items.Clear();
+                cmbCidade.Items.Add("Queens");
+                cmbCidade.Items.Add("Brooclyn");
+            }
+            else if(cmbPais.SelectedIndex == 1 && cmbEstado.SelectedIndex == 1)
+            {
+                cmbCidade.Visible = true;
+                lblCidade.Visible = true;
+                
+                cmbEstado.Text = "";
+                cmbCidade.Text = "";
+
+                cmbCidade.Items.Clear();
+                cmbCidade.Items.Add("Los Angeles");
+                cmbCidade.Items.Add("San Francisco");
+            }
+                        
         }
     }
 }

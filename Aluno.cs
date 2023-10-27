@@ -110,8 +110,6 @@ namespace AprendendoClasses
             return this.dtNasc;
         }
 
-        
-
         public void mediaCalc()
         {
             this.media = (this.nota1 + this.nota2) / 2;

@@ -10,7 +10,7 @@ namespace AprendendoClasses
     {
         // Declarndo atributos da classe
         public string marca, placa, cor, combustivel;
-        private double preco;
+        private double preco, precoSomado, valFinal;
         private DateTime dataCompra;
         public int tempoUso, numBatidas;
 
@@ -25,6 +25,8 @@ namespace AprendendoClasses
             this.dataCompra = DateTime.Today;
             this.tempoUso = 0;
             this.numBatidas = 0;
+            this.precoSomado = 100;
+            
         }
 
         // Atribuindo classe Carro: Marca
@@ -108,6 +110,31 @@ namespace AprendendoClasses
             return this.numBatidas;
         }
 
+        public void setPrecoSomado(double precoSomado)
+        {
+            this.precoSomado = precoSomado;
+        }
+
+        public double getPrecoSomado()
+        {
+            return this.precoSomado;
+        }
+
+        public void setValFinal(double valFinal)
+        {
+            this.valFinal = valFinal;
+        }
+
+        public double getValFinal()
+        {
+            return this.valFinal;
+        }
+
+        public void sumValor()
+        {
+            this.valFinal = this.preco + this.precoSomado;
+            this.preco = this.valFinal;
+        }
     }
      
 }

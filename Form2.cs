@@ -18,9 +18,8 @@ namespace AprendendoClasses
         }
 
         //Criando objeto carro
-        Carro objCarro = new Carro(); // Chamada
-
-        int op;
+        int i;
+        Carro[] objCarro = new Carro[10]; // Chamada
 
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -31,24 +30,25 @@ namespace AprendendoClasses
         {
             try
             {
+                objCarro[i] = new Carro();
                 // Atribui valor aos atributos com os set's
-                objCarro.setPlaca(txtPlaca.Text);
-                objCarro.setCor(cmbCorCarro.Text);
-                objCarro.setCombustivel(txtCombustivel.Text);
-                objCarro.setDataCompra(dtpDataCompra.Value);
-                objCarro.setMarca(txtMarca.Text);
-                objCarro.setPreco(Convert.ToDouble(txtPreco.Text));
-                objCarro.setNumBatidas(Convert.ToInt16(txtNumBatidas.Text));
+                objCarro[i].setPlaca(txtPlaca.Text);
+                objCarro[i].setCor(cmbCorCarro.Text);
+                objCarro[i].setCombustivel(txtCombustivel.Text);
+                objCarro[i].setDataCompra(dtpDataCompra.Value);
+                objCarro[i].setMarca(txtMarca.Text);
+                objCarro[i].setPreco(Convert.ToDouble(txtPreco.Text));
+                objCarro[i].setNumBatidas(Convert.ToInt16(txtNumBatidas.Text));
 
                 // Acessando os metodos get
-                lblClasse.Text = ("Placa: " + objCarro.getPlaca());
-                lblClasse.Text += ("\nModelo: " + objCarro.getMarca());
-                lblClasse.Text += ("\nCor: " + objCarro.getCor());
-                lblClasse.Text += ("\nPreço: " + objCarro.getPreco());
-                lblClasse.Text += ("\nData Compra : " + objCarro.getDataCompra());
-                lblClasse.Text += ("\nNum batidas : " + objCarro.getNumBatidas());
-                lblClasse.Text += ("\nMarca : " + objCarro.getMarca());
-                
+                lblClasse.Text = ("Placa: " + objCarro[i].getPlaca());
+                lblClasse.Text += ("\nModelo: " + objCarro[i].getMarca());
+                lblClasse.Text += ("\nCor: " + objCarro[i].getCor());
+                objCarro[i].sumValor();
+                lblClasse.Text += ("\nPreço: " + objCarro[i].getPreco());
+                lblClasse.Text += ("\nData Compra : " + objCarro[i].getDataCompra());
+                lblClasse.Text += ("\nNum batidas : " + objCarro[i].getNumBatidas());
+                lblClasse.Text += ("\nMarca : " + objCarro[i].getMarca());
 
                 }
 
@@ -71,8 +71,36 @@ namespace AprendendoClasses
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int val = Convert.ToInt32(txtPreco.Text);
-            val = val + 100;
+            try
+            {
+                objCarro[i] = new Carro();
+
+                // Atribui valor aos atributos com os set's
+                objCarro[i].setPlaca(txtPlaca.Text);
+                objCarro[i].setCor(cmbCorCarro.Text);
+                objCarro[i].setCombustivel(txtCombustivel.Text);
+                objCarro[i].setDataCompra(dtpDataCompra.Value);
+                objCarro[i].setMarca(txtMarca.Text);
+                objCarro[i].setPreco(Convert.ToDouble(txtPreco.Text));
+                objCarro[i].setNumBatidas(Convert.ToInt16(txtNumBatidas.Text));
+
+                // Acessando os metodos get
+                lblClasse.Text = ("Placa: " + objCarro[i].getPlaca());
+                lblClasse.Text += ("\nModelo: " + objCarro[i].getMarca());
+                lblClasse.Text += ("\nCor: " + objCarro[i].getCor());
+                objCarro[i].sumValor();
+                lblClasse.Text += ("\nPreço: " +  objCarro[i].getPreco());
+                lblClasse.Text += ("\nData Compra : " + objCarro[i].getDataCompra());
+                lblClasse.Text += ("\nNum batidas : " + objCarro[i].getNumBatidas());
+                lblClasse.Text += ("\nMarca : " + objCarro[i].getMarca());
+
+
+            }
+
+            catch (FormatException)
+            {
+                MessageBox.Show("Erro de inclusão");
+            }
         }
     }
 }
