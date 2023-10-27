@@ -37,5 +37,12 @@ namespace AprendendoClasses
             this.Hide();
             quatro.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 cinco = new Form5();
+            this.Hide();
+            cinco.Show();
+        }
     }
 }

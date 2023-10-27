@@ -32,15 +32,16 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCadastrarAnimal = new System.Windows.Forms.Button();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
+            this.btnCadastrarImovel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClasseCarro
             // 
             this.btnClasseCarro.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnClasseCarro.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClasseCarro.Location = new System.Drawing.Point(85, 136);
+            this.btnClasseCarro.Location = new System.Drawing.Point(95, 138);
             this.btnClasseCarro.Name = "btnClasseCarro";
-            this.btnClasseCarro.Size = new System.Drawing.Size(194, 154);
+            this.btnClasseCarro.Size = new System.Drawing.Size(194, 144);
             this.btnClasseCarro.TabIndex = 0;
             this.btnClasseCarro.Text = "Cadastrar Carros";
             this.btnClasseCarro.UseVisualStyleBackColor = false;
@@ -62,9 +63,9 @@
             // 
             this.btnCadastrarAnimal.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCadastrarAnimal.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCadastrarAnimal.Location = new System.Drawing.Point(285, 136);
+            this.btnCadastrarAnimal.Location = new System.Drawing.Point(295, 138);
             this.btnCadastrarAnimal.Name = "btnCadastrarAnimal";
-            this.btnCadastrarAnimal.Size = new System.Drawing.Size(194, 154);
+            this.btnCadastrarAnimal.Size = new System.Drawing.Size(194, 144);
             this.btnCadastrarAnimal.TabIndex = 2;
             this.btnCadastrarAnimal.Text = "Cadastrar Animal";
             this.btnCadastrarAnimal.UseVisualStyleBackColor = false;
@@ -74,19 +75,32 @@
             // 
             this.btnCadastrarAluno.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCadastrarAluno.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCadastrarAluno.Location = new System.Drawing.Point(485, 136);
+            this.btnCadastrarAluno.Location = new System.Drawing.Point(495, 140);
             this.btnCadastrarAluno.Name = "btnCadastrarAluno";
-            this.btnCadastrarAluno.Size = new System.Drawing.Size(194, 154);
+            this.btnCadastrarAluno.Size = new System.Drawing.Size(194, 144);
             this.btnCadastrarAluno.TabIndex = 3;
             this.btnCadastrarAluno.Text = "Cadastrar Aluno";
             this.btnCadastrarAluno.UseVisualStyleBackColor = false;
             this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
+            // 
+            // btnCadastrarImovel
+            // 
+            this.btnCadastrarImovel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCadastrarImovel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastrarImovel.Location = new System.Drawing.Point(295, 288);
+            this.btnCadastrarImovel.Name = "btnCadastrarImovel";
+            this.btnCadastrarImovel.Size = new System.Drawing.Size(194, 144);
+            this.btnCadastrarImovel.TabIndex = 4;
+            this.btnCadastrarImovel.Text = "Cadastrar Imóvel";
+            this.btnCadastrarImovel.UseVisualStyleBackColor = false;
+            this.btnCadastrarImovel.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCadastrarImovel);
             this.Controls.Add(this.btnCadastrarAluno);
             this.Controls.Add(this.btnCadastrarAnimal);
             this.Controls.Add(this.btnSair);
@@ -103,5 +117,6 @@
         private Button btnSair;
         private Button btnCadastrarAnimal;
         private Button btnCadastrarAluno;
+        private Button btnCadastrarImovel;
     }
 }
